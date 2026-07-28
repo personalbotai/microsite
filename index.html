@@ -7,17 +7,17 @@
   <!-- Kita gunakan Tailwind CSS via CDN agar styling persis seperti Next.js -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white">
+<body class="bg-white overflow-hidden m-0 p-0">
 
-  <!-- Komponen UI -->
-  <div class="flex flex-col gap-4 font-mono text-sm/6 text-center p-4">
-    <div id="token-display" class="bg-green-100 text-green-800 p-2 rounded break-words">
-      Token: Menunggu token...
-    </div>
-    
+  <!-- Iframe Full Screen -->
+  <iframe src="https://ultravoucher.co.id" class="w-full h-screen border-none" title="Ultra Voucher"></iframe>
+
+  <!-- Fixed Bottom Button -->
+  <div class="fixed bottom-0 left-0 w-full p-4 bg-white border-t shadow-lg z-50">
+    <div id="token-display" class="hidden"></div>
     <button 
       id="btn-confirmation"
-      class="mt-2 bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded"
+      class="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 rounded-lg shadow"
     >
       Confirmation
     </button>
